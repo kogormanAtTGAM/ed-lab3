@@ -7,8 +7,7 @@ driver:
 ## see also: https://docs.vagrantup.com/v2/networking/forwarded_ports.html
 
 network:
- - ["forwarded_port", {guest: 80, host: 80}]
-#  - 80:8080
+  - ["forwarded_port", {guest: 80, host: 80}]
 
 provisioner:
   name: policyfile_zero
@@ -22,8 +21,8 @@ provisioner:
 platforms:
   - name: centos-6.5
     driver_config:
-        forward:
-          - 80:80
+      forward:
+      - 80:80
 
 suites:
   - name: default
