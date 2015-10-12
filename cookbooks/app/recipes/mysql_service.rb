@@ -5,8 +5,8 @@
 # Copyright (c) 2015 The Authors, All Rights Reserved.
 
 mysql_service 'joengo' do
-	port '3306'
-	version '5.5'
-	initial_root_password 'banana'
-	action [:create, :start]
+  port '3306'
+  version '5.5'
+  initial_root_password 'banana'
+  action [:create, :start]
 end
