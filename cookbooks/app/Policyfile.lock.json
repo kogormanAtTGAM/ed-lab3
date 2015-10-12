@@ -1,0 +1,155 @@
+{
+  "revision_id": "ed814309ff7a032349a1178c4c2687f955b4c48665af5817c8a9eb3f6e0adbfa",
+  "name": "app",
+  "run_list": [
+    "recipe[app::default]"
+  ],
+  "cookbook_locks": {
+    "app": {
+      "version": "0.1.0",
+      "identifier": "2a93309140fc54e288c492c6b02cb6f13d2da92d",
+      "dotted_decimal_identifier": "11983785826516052.63763722594070572.201147229776173",
+      "source": ".",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "https://github.com/kogormanAtTGAM/ed-lab3.git",
+        "revision": "330aefc4cae5cda15453ec8322c5a18250556102",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/HEAD -> origin/master",
+          "origin/master"
+        ]
+      },
+      "source_options": {
+        "path": "."
+      }
+    },
+    "mysql": {
+      "version": "6.1.2",
+      "identifier": "694f4c57df0ce3dc49e0124e78934a2aa63581d7",
+      "dotted_decimal_identifier": "29642061864963299.62005721604978835.81547037606359",
+      "cache_key": "mysql-6.1.2-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/mysql/versions/6.1.2/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/mysql/versions/6.1.2/download",
+        "version": "6.1.2"
+      }
+    },
+    "yum-mysql-community": {
+      "version": "0.1.18",
+      "identifier": "6e0ea2fb060e0d9f1ae129507bbff05e883a7cee",
+      "dotted_decimal_identifier": "30978340597141005.44784075660098495.264288803126510",
+      "cache_key": "yum-mysql-community-0.1.18-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/yum-mysql-community/versions/0.1.18/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/yum-mysql-community/versions/0.1.18/download",
+        "version": "0.1.18"
+      }
+    },
+    "smf": {
+      "version": "2.2.7",
+      "identifier": "49e1c63d34fc90f2c8a2f05e935c98397c050cca",
+      "dotted_decimal_identifier": "20795914846534800.68337546506965852.167372661263562",
+      "cache_key": "smf-2.2.7-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/smf/versions/2.2.7/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/smf/versions/2.2.7/download",
+        "version": "2.2.7"
+      }
+    },
+    "yum": {
+      "version": "3.7.1",
+      "identifier": "d6eac9a683ba9fa5bf8d8efb3727ae13982b4836",
+      "dotted_decimal_identifier": "60493796819057311.46653985867380519.191399180585014",
+      "cache_key": "yum-3.7.1-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/yum/versions/3.7.1/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/yum/versions/3.7.1/download",
+        "version": "3.7.1"
+      }
+    },
+    "rbac": {
+      "version": "1.0.3",
+      "identifier": "9e7da4381830b92d9066a531df8aa5ea96a1bf75",
+      "dotted_decimal_identifier": "44611190589501625.12825144484552586.182426968113013",
+      "cache_key": "rbac-1.0.3-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/rbac/versions/1.0.3/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/rbac/versions/1.0.3/download",
+        "version": "1.0.3"
+      }
+    }
+  },
+  "default_attributes": {
+
+  },
+  "override_attributes": {
+
+  },
+  "solution_dependencies": {
+    "Policyfile": [
+      [
+        "app",
+        ">= 0.0.0"
+      ],
+      [
+        "mysql",
+        "= 6.1.2"
+      ],
+      [
+        "yum-mysql-community",
+        "= 0.1.18"
+      ],
+      [
+        "smf",
+        "= 2.2.7"
+      ],
+      [
+        "yum",
+        "= 3.7.1"
+      ],
+      [
+        "rbac",
+        "= 1.0.3"
+      ]
+    ],
+    "dependencies": {
+      "mysql (6.1.2)": [
+        [
+          "yum-mysql-community",
+          ">= 0.0.0"
+        ],
+        [
+          "smf",
+          ">= 0.0.0"
+        ]
+      ],
+      "yum-mysql-community (0.1.18)": [
+        [
+          "yum",
+          ">= 3.0.0"
+        ]
+      ],
+      "smf (2.2.7)": [
+        [
+          "rbac",
+          ">= 1.0.1"
+        ]
+      ],
+      "yum (3.7.1)": [
+
+      ],
+      "rbac (1.0.3)": [
+
+      ],
+      "app (0.1.0)": [
+        [
+          "mysql",
+          "~> 6.0"
+        ]
+      ]
+    }
+  }
+}
