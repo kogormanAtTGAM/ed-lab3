@@ -1,9 +1,6 @@
 require 'spec_helper'
 
-describe 'app::default' do
-  # Serverspec examples can be found at
-  # http://serverspec.org/resource_types.html
-  it 'does something' do
-    skip 'Replace this with meaningful tests'
-  end
+describe command ('curl -s http://localhost') do
+  its(:stdout) { should_not contain('Centos') }
+  its(:stdout) { should contain('Hello World') }
 end
